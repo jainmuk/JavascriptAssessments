@@ -1,0 +1,37 @@
+<!--Write regex for following patterns  -->
+<!--Email patten 
+Numbers only pattern 
+International phone number 
+File path  
+Find HTML tags -->
+<!DOCTYPE html> 
+<html> 
+<body> 
+<h1>Java Script Playground</h1> 
+<p>Use below java script to try out learning pathway Java Script assignment</p> 
+<p id="demo"></p> 
+<script> 
+var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var numbersOnlyPattern = /^\d+$/;
+var phoneNumberPattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+var filePathPattern = /^([a-zA-Z]:)?(\\[^<>:"/\\|?*]*)+$/;
+var tagPattern = /<([a-zA-Z][^\s>]*)[^>]*>/g;
+var number = prompt("Enter text");
+
+
+if (emailPattern.test(number)) {
+  console.log("Valid email");
+} else if(numbersOnlyPattern.test(number)){
+  console.log("valid number");
+}else if(phoneNumberPattern.test(number)){
+  console.log("valid phone number");
+}else if(filePathPattern.test(number)){
+  console.log("valid File path");
+}else if(tagPattern.test(number)){
+  console.log("valid HTML tags");
+}else{
+    console.log("Invalid input");
+}
+</script> 
+</body> 
+</html> 
